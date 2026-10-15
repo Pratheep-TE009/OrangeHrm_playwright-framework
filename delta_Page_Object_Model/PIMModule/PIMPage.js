@@ -20,3 +20,4 @@ export class PIMPage {
         this.resetButton = page.getByRole('button', { name: 'Reset' })
     }
 }
+export default PIMPage

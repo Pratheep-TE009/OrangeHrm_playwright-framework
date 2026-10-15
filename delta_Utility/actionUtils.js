@@ -31,8 +31,9 @@ export class ActionUtils {
         await page.click(selector, { button: 'right' });
     }
 
-    static async fill(page, selector, text) {
-        await page.fill(selector, text);
+    static async fill(selector, text) {
+        await selector.fill(text)
+        //await page.fill(selector, text);
     }
 
     static async type(page, selector, text, delay = 50) {

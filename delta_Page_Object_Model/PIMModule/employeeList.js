@@ -1,5 +1,5 @@
 
-export class AddEmployee {
+export class EmployeeList {
     /**
        * @param {import('playwright').Page} page 
        */
@@ -15,6 +15,12 @@ export class AddEmployee {
         this.succesfullToaster = page.locator('#oxd-toaster_1')
         this.uploadImageBtn = page.locator("//button[@class='oxd-icon-button oxd-icon-button--solid-main employee-image-action']")
         this.toasterMessage = page.locator('//p[@class="oxd-text oxd-text--p oxd-text--toast-message oxd-toast-content-text"]')
+        this.maritalStatusDD=page.locator("//label[.='Marital Status']/../following-sibling::div")
+        this.maritalStatusOptionSingle=page.locator("//label[.='Marital Status']/../following-sibling::div//div[@role='option' ]/span[text()='Single']")
+        this.maritalStatusOptionMarried=page.locator("//label[.='Marital Status']/../following-sibling::div//div[@role='option' ]/span[text()='Married']")
+        this.maritalStatusOptionOther=page.locator("//label[.='Marital Status']/../following-sibling::div//div[@role='option' ]/span[text()='Other']")
+        this.personalDetailModifySaveBtn=page.locator("//p[.=' * Required']/..//button")
+    
     }
 
     async searchEmployee(firstname, lastname, employeeId, username, password) {

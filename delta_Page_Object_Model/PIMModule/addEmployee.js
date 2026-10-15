@@ -48,3 +48,5 @@ export class AddEmployee {
         await this.page.waitForLoadState('networkidle')
     }
 }
+
+export default AddEmployee
